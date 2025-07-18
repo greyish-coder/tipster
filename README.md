@@ -6,7 +6,7 @@ This repository contains the source code for the "Tipster" web tool, a simple ca
 
 **The live, usable version of this tool is hosted on GitHub Pages at:**
 
-[https://your-username.github.io/your-repo-name/](https://www.google.com/search?q=https://your-username.github.io/your-repo-name/)
+[https://greyish-coder.github.io/tipster](https://greyish-coder.github.io/tipster)
 
 ### **About This Repository**
 
