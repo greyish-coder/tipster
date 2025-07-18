@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html id="infoPage">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Tipster Info</title>
+    <meta name="author" content="-greyish-" />
+    <meta name="description" content="Pooled tips calculator and distributor" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h1 id="welcome-to-tipster">
+      Tipster
+    </h1>
+    <h2 id="by-greyish">
+      by <a href="https://glitch.com/@-greyish-">-greyish-</a>
+    </h2>
+    <p>
+      Tipster is a basic pooled tips distributor with a bit of sauce under the
+      hood.
+    </p>
+    <p>
+      <i>
+      (Note: Tipster does not store data anywhere, track users, or remember anything. It momentarily uses the 
+      numerical values you input to calculate tips. Beyond that, it's blind. Once
+      you close the tab, everything is wiped.)
+      </i>
+    </p>
+    <p><b>How to use:</b></p>
+    <p>
+      1) Enter each person&#39;s hours worked (for the week, typically) in the
+      Hours column. (If you need more rows, click the little person icon to add them.)
+    </p>
+    <p>
+      2) Enter the total amount of tips you wish to distribute among your
+      people.
+    </p>
+    <p>
+      Tipster will then calculate the hourly tip rate (by dividing total tips by
+      total hours worked) and use that to determine how much out of the total
+      pool of tips each person should get, based on how many hours that person
+      worked.
+    </p>
+    <p>
+      (Tipster will also round people&#39;s individual tip earnings to the
+      nearest dollar. More on that in a bit.)
+    </p>
+    <p><b>Example:</b></p>
+    <ul>
+      <li>
+        <p>
+          For a particular week, 15 people worked a combined total of 200 hours.
+          The accumulated tips they earned together totaled $154. This means
+          their calculated &#39;hourly tip rate&#39; for that week is 154/200,
+          or $0.77 an hour.
+        </p>
+      </li>
+      <li>
+        <p>
+          Among these 15 people, let&#39;s say JD worked 12 hours. So JD should
+          get 12 x 0.77, or $9.24 (if we don&#39;t round) from the total tips
+          pile.
+        </p>
+      </li>
+      <li>
+        <p>
+          We then continue by looking at each person&#39;s individual hours
+          worked, tip them one by one according to the hourly tip rate we
+          calculated for the week, and by the end, the total tips pile should be
+          distributed out.
+        </p>
+      </li>
+    </ul>
+    <p><b>But there&#39;s a twist.</b></p>
+    <p>
+      It&#39;s pretty common practice to give people their tips using whole
+      dollar amounts, without any loose change.
+    </p>
+    <p>So that&#39;s what Tipster does.</p>
+    <p>
+      From the example above, JD&#39;s tips would typically get rounded from
+      $9.24 to the nearest dollar, meaning $9.
+    </p>
+    <p>
+      And everyone else&#39;s calculated tips would get rounded, either up or
+      down, depending on what decimal they end in.
+    </p>
+    <p>But this can cause problems.</p>
+    <p>Consider this simple example:</p>
+    <ul>
+      <li>M is owed $1.50 in tips, J is owed $1.45, and A is owed $1.30.</li>
+    </ul>
+    <p>
+      If we round normally, M gets $2, and both J and A get $1. So that&#39;s $4
+      combined that they&#39;re owed from the total tips pile.
+    </p>
+    <p>
+      But notice that if we hadn&#39;t rounded, they actually would have been
+      owed $4.25 from the total pile. In this case, that extra 25 cents gets
+      left in the pile, due to rounding.
+    </p>
+    <p>
+      As we increase the number of people and add more instances of rounding, it
+      increases the chances that, by the end, our total tips pile will either
+      have some money left over in it after distribution, or worse, too little
+      in it to adequately distribute because too many people were rounded up.
+    </p>
+    <p>
+      To handle rounding problems of this type, what Tipster does is try to find
+      a <b>rounding threshold</b> that, when applied to everyone equally,
+      causes all individual tips to be rounded to whole dollar amounts that,
+      when added up, are equal to (or occasionally less than, but never greater
+      than) the total tips pile.
+    </p>
+    <p>
+      So taking our simple example above with J, M, and A, Tipster might apply a
+      rounding threshold of .45 to all of them. This means that
+      Tipster would decide to round all individual tips ending in a decimal of .45
+      or greater <em>up</em>, and those ending in a decimal smaller than
+      .45 <em>down.</em>
+    </p>
+    <p>
+      As a result, M would still get $2, but now so would J, while A would still
+      get $1.
+    </p>
+    <p>
+      To be clear, Tipster would only do this if, after trying standard rounding
+      (where the rounding threshold is .5) on everyone, there was
+      money left over in the total tips pile after distribution. In that case,
+      Tipster would start lowering the threshold until enough people who were
+      close to being rounded up (but weren&#39;t) <em>do</em> get rounded up.
+    </p>
+    <p>
+      <b>
+      In other words, Tipster will always do its best to find an optimal
+      rounding threshold that causes the <em>entire</em> tips pile to be
+      distributed in whole dollar amounts to all the people who worked that
+      week.
+      </b>
+    </p>
+    <p>
+      Failing that, Tipster will resort to distributing whole dollar tips that
+      add up to an amount as close to the total tips pile as possible, without
+      going over.
+    </p>
+  </body>
+</html>

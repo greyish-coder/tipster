@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <meta charset="utf-8">
+
+  <title>Tipster</title>
+  <meta name="author" content="-greyish-">
+  <meta name="description" content="Pooled tips calculator and distributor">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua+One|Open+Sans">
+
+  <link href="style.css" rel="stylesheet" type="text/css">
+
+  <script>
+    /*  Ensure we always go to https */
+    /* if (location.protocol != 'https:') {
+     location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+    } */
+  </script>
+
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+
+  <table id="justCaption">
+    <caption class="unselectable">&nbsp;&nbsp;&nbsp;&nbsp;☕&nbsp;Tipster&nbsp;&nbsp;&nbsp;</caption>
+    <div id="help" class="unselectable animate__animated animate__fadeInDown animate__delay-1s">
+      ?
+    </div>
+  </table>
+
+  <!-- A div to contain & position our dimmer filter when Info Screen is toggled -->
+  <div style="position: absolute; left: 50%;">
+    <div id="dimmer" style="position: relative; left: -50%;" hidden>
+    </div>
+  </div>
+
+  <!-- A div to contain & position some of our informational speech bubbles -->
+  <div style="position: absolute; left: 50%;">
+    <div style="position: relative; left: -50%; width: 190px; overflow: visible"></div>
+
+    <div id="speechBubble_3" class="speech-bubble unselectable" hidden>
+      <div id="sB3_arrow" class="arrow-top"></div>
+      Click me to <br>
+      add people!
+    </div>
+
+    <div id="speechBubble_4" class="speech-bubble unselectable" hidden>
+      <a href="info.html" target="_blank">more info</a>
+    </div>
+
+    <div id="speechBubble_5" class="speech-bubble unselectable" hidden>
+      <div id="sB5_arrow" class="arrow-right"></div>
+      Add rows
+    </div>
+
+  </div>
+
+  <table id="mainTable">
+    <tr>
+      <td id="icon">
+        <img
+          src="https://cdn.glitch.com/bcce6c5b-a2f8-444b-b869-ed9526f3cb0b%2Fmini-person-tiny-plus.png?v=1601773534092"
+          style="display:block;margin:auto;" class="animate__animated animate__flash animate__delay-3s">
+      </td>
+      <th class="colHeader unselectable">
+
+        <div id="speechBubble_1" class="speech-bubble unselectable" hidden>
+          <div id="sB1_arrow" class="arrow-bottom"></div>
+          In this column, enter each <br>
+          person's hours worked.
+        </div>
+
+        Hours
+      </th>
+      <th class="colHeader unselectable"> Tips </th>
+    </tr>
+  </table>
+
+  <table id="totalsTable">
+    <tr>
+      <th class="unselectable">
+        =
+      </th>
+      <td class="unselectable" id="totalHours"></td>
+      <td class="unselectable" id="totalTips"></td>
+    </tr>
+  </table>
+
+  <table id="totalTipsInputTable">
+    <tr>
+      <th class="unselectable">
+
+        <div id="speechBubble_2" class="speech-bubble unselectable" hidden>
+          <div id="sB2_arrow" class="arrow-bottom"></div>
+          In this box, enter the amount of<br>
+          total tips you wish to distribute.
+        </div>
+
+        Total tips to distribute:
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <input id="inputTips" placeholder="Enter total count here">
+      </td>
+    </tr>
+  </table>
+
+  <table id="tipRateTable" hidden>
+    <tr>
+      <th class="unselectable">Hourly tip rate:</th>
+    </tr>
+    <tr>
+      <td class="unselectable" id="hourlyRate"></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

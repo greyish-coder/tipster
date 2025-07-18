@@ -1,0 +1,407 @@
+/* STYLE FOR INDEX PAGE */
+
+html {
+  font-family: "Patua one" sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid rgb(148, 148, 148);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  margin: auto;
+  table-layout: fixed;
+  width: 190px;
+  position: relative;
+}
+
+td,
+th {
+  border: 1px solid rgb(182, 197, 213);
+  padding: 5px 12px;
+  overflow: hidden;
+  min-width: 12px;
+  max-width: 50px;
+  text-align: center;
+}
+
+td {
+  position: relative;
+  font-size: 14px;
+}
+
+td input {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: rgba(250, 250, 250, 0);
+  resize: none;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-size: 14px;
+  text-align: center;
+}
+
+td input:focus {
+  background-color: rgba(144, 163, 177, 0.3);
+}
+
+th {
+  background-color: rgba(194, 221, 250, 0.6);
+}
+
+.colHeader {
+  background-color: rgba(173, 212, 255, 0.8);
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  min-width: 50px;
+  overflow: visible;
+}
+
+#icon {
+  padding: 0px;
+  width: 39px;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250, 250, 250, 0.4);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgba(211, 223, 237, 0.4);
+}
+
+caption {
+  position: static;
+  padding: 10px;
+  padding-left: 25px;
+  font-family: "Patua One", cursive;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0.5px 1px 0px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(#646f7f, #4a5564);
+  border: 1px solid rgb(148, 148, 148);
+
+  line-height: 7px;
+  height: 8px;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#help {
+  padding: 0px;
+  padding-right: 0.5px;
+  padding-right: 0px;
+  padding-left: 0.5px;
+  font-family: "Patua One", cursive;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  background-color: rgb(92, 139, 222);
+  border: 1px solid rgb(140, 180, 249);
+
+  width: 14px;
+  height: 14px;
+
+  box-shadow: 2px 2px rgba(126, 126, 126, 0.605);
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.5);
+
+  line-height: 15px;
+
+  right: 149px;
+
+  left: 0px;
+
+  top: 14.5px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+  z-index: 1;
+
+  opacity: 1;
+}
+
+.unselectable {
+  cursor: default;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Remove num input step arrows for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove num input step arrows for Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#totalsTable {
+  width: 190px;
+  margin-bottom: 5px;
+}
+
+#totalsTable th {
+  width: 15px;
+  font-size: 0.9rem;
+  background-color: rgba(173, 212, 255, 0.8);
+}
+
+#totalsTable td {
+  background-color: rgba(211, 223, 237, 0.75);
+  max-width: 50px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+#tipRateTable,
+#totalTipsInputTable {
+  width: 190px;
+  margin-bottom: 5px;
+}
+
+#tipRateTable th,
+#totalTipsInputTable th {
+  text-align: left;
+}
+
+#tipRateTable td,
+#totalTipsInputTable td {
+  height: 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#tipRateTable td input,
+#totalTipsInputTable td input {
+  text-align: left;
+  padding-left: 12px;
+}
+
+#tipRateTable tr {
+  background-color: rgba(211, 223, 237, 0.4);
+}
+
+#justCaption {
+  width: 190px;
+  margin-bottom: -1px;
+}
+
+#dimmer {
+  background-color: #ffffff;
+  border: transparent;
+  position: absolute;
+  opacity: 0.5;
+  z-index: 1;
+  width: 190px;
+  height: 400px;
+}
+
+.speech-bubble {
+  background-color: #f8f8f8;
+  border: 1px solid #858585;
+  border-radius: 4px;
+  width: intrinsic; /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content; /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+  width: max-content;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.85);
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: lighter;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+  z-index: 2;
+}
+
+.speech-bubble .arrow {
+  border-style: solid;
+  position: absolute;
+}
+
+.arrow-bottom {
+  width: 0;
+  height: 0;
+  border-top: 8px solid #858585;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  bottom: -8px;
+  position: absolute;
+}
+
+.arrow-bottom:after {
+  border-top: 7px solid #f8f8f8;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  left: -7px;
+  bottom: 1px;
+  content: "";
+  position: absolute;
+}
+
+.arrow-top {
+  width: 0;
+  height: 0;
+  border-bottom: 8px solid #858585;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  top: -8px;
+  position: absolute;
+}
+
+.arrow-top:after {
+  border-bottom: 7px solid #f8f8f8;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  left: -7px;
+  top: 1px;
+  content: "";
+  position: absolute;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid #858585;
+  right: -7px;
+  position: absolute;
+}
+
+.arrow-right:after {
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid #f8f8f8;
+  right: 1px;
+  bottom: -4px;
+  content: "";
+  position: absolute;
+}
+
+#speechBubble_1 {
+  left: 45px;
+  right: 0px;
+  top: 2px;
+}
+
+#sB1_arrow {
+  left: 20px;
+}
+
+#speechBubble_2 {
+  left: 20px;
+  right: 0px;
+  bottom: 58%;
+}
+
+#sB2_arrow {
+  left: 20px;
+}
+
+#speechBubble_3 {
+  right: 229px;
+  top: 42px;
+}
+
+#sB3_arrow {
+  left: 32px;
+}
+
+#speechBubble_4 {
+  left: 95px;
+  top: -22px;
+  background-color: transparent;
+  border: transparent;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+#speechBubble_5 {
+  right: 280px;
+  top: 8px;
+  padding-right: 2px;
+  padding-left: 4px;
+  border-color: #D4AF37;
+  background-color: #FFFFDE;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-radius: 0px;
+}
+
+#sB5_arrow {
+  bottom: 4px;
+}
+
+#sB5_arrow.arrow-right {
+  border-left: 7px solid #D4AF37;
+}
+
+#sB5_arrow.arrow-right:after {
+  border-left: 6px solid #FFFFDE;
+}
+
+a {
+  color: rgb(92, 139, 222, 0.9);
+  text-decoration-color: rgb(92, 139, 222, 0.5);
+}
+
+/* STYLE FOR INFO PAGE */
+
+#infoPage {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 600px;
+  padding: 10px;
+  margin: auto;
+}
+
+#welcome-to-tipster {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#by-greyish {
+  text-align: center;
+  text-indent: 45px;
+  font-size: 12px;
+  margin-top: 5px;
+}
