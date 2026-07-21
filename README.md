@@ -8,6 +8,8 @@ This repository contains the source code for the "Tipster" web tool, a simple ca
 
 [https://greyish-coder.github.io/tipster](https://greyish-coder.github.io/tipster)
 
+(or via the shortened link, 'bit.ly/swifterTips')
+
 ### **About This Repository**
 
 This code was originally created by **\-greyish-** and hosted on Glitch. This GitHub repository serves exclusively as a hosting platform for the tool via GitHub Pages.
